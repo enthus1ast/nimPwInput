@@ -1,7 +1,7 @@
 import terminal
 import strutils
 
-proc pwinput(prompt: string = "Password: "): string = 
+proc pwinput*(prompt: string = "Password: "): string = 
   ## reads a line from stdin 
   ## but does not echo characters
   var ch: char
