@@ -1,4 +1,5 @@
 import terminal
+import strutils
 
 proc pwinput(prompt: string = "Password: "): string = 
   ## reads a line from stdin 
@@ -9,7 +10,7 @@ proc pwinput(prompt: string = "Password: "): string =
     write(stdout, prompt)
   while true:
     ch = getch()
-    if ch == '\c':
+    if ch in NewLines:
       break
     result.add $ch
 
